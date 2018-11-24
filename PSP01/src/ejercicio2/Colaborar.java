@@ -21,7 +21,7 @@ public class Colaborar {
 					int lines = (1+i)*10;
 					//Cuando i toma valor 0, se crean 10 palabras en el fichero pasado por parámetro args[1]
 					//Cuando i toma valor 1, se añaden 20 palabras... etc.
-					Runtime.getRuntime().exec("java ejercicio2.Lenguaje " + lines + " " + args[1] );
+					Runtime.getRuntime().exec("java -jar Lenguaje.jar " + lines + " " + args[1] );
 					System.out.println("Se han generado " + lines + " palabras.");
 					sum = sum+ lines; //Va sumando hasta alcanzar el total de palabras generadas
 					}

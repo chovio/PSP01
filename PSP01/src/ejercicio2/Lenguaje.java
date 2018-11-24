@@ -70,6 +70,7 @@ public class Lenguaje {
 				
 				}//Fin for
 				
+				if(file.exists()) {System.out.println("El archivo se ha creado en: "+file.getAbsolutePath().toString());}
 				
 			}catch(Exception e) {
 			
