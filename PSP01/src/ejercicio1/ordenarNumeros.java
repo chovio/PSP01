@@ -12,46 +12,43 @@ import java.util.Collections;
  * la otra clase
  */
 
-
 public class ordenarNumeros {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		try {
-			
+
 			InputStreamReader input = new InputStreamReader(System.in);
 			BufferedReader bufferInput = new BufferedReader(input);
-			String stInput = null;		
-			
+			String stInput = null;
+
 			ArrayList<Integer> integerList = new ArrayList<Integer>();
-			
-			while((stInput = bufferInput.readLine()) != null ) {
-				
-				if(!stInput.matches("\\d\\d*")) {
-					
+
+			while ((stInput = bufferInput.readLine()) != null) {
+
+				if (!stInput.matches("\\d\\d*")) {
+
 					System.out.println("Entrada de datos incorrecta. No es un dígito.");
 					return;
-					
+
 				}
 				integerList.add(Integer.parseInt(stInput));
 			}
 			bufferInput.close();
 			input.close();
 			Collections.sort(integerList);
-			
-			for (int i: integerList) {
+
+			for (int i : integerList) {
 				System.out.println(i);
-				
+
 			}
-			
-		}catch(IOException e) {
-			
+
+		} catch (IOException e) {
+
 			e.printStackTrace();
 		}
-		
-		
-		
+
 	}
 
 }
