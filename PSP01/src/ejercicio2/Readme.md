@@ -62,25 +62,25 @@ if (args.length == 2 && args[0].matches("\\d+")) {
 
 			// Muestra la palabra generada
 
-			} // Fin for
+		} // Fin for
 	
-			if (file.exists()) {
+		if (file.exists()) {
 			
-				System.out.println("El archivo se ha creado en: " + file.getAbsolutePath().toString());
-			
-			}
-		
-		} catch (Exception e) {
-	
-			e.printStackTrace();
-		
-		} finally {
-			
-			writer.close();
+			System.out.println("El archivo se ha creado en: " + file.getAbsolutePath().toString());
+			//Para ver dónde se ha generado el archivo
 		}
 		
-	} else System.out.println("Error en parámetros.");
-}
+	} catch (Exception e) {
+	
+		e.printStackTrace();
+		
+	} finally {
+			
+		writer.close();
+	}
+		
+} else System.out.println("Error en parámetros.");
+
 ```
 
 ![Captura Lenguaje](http://subirimagen.me/uploads/20181124103101.png)
