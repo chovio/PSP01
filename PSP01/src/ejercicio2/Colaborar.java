@@ -41,7 +41,6 @@ public class Colaborar {
 
 				System.out.println("Total palabras generadas: " + sum);
 
-
 			} catch (IOException e) {
 
 				e.printStackTrace();
