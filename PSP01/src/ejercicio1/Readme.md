@@ -71,8 +71,19 @@ if(args.length == 1 && args[0].matches("\\d\\d*")) {
 }
 ```
 ## Ejecución:
+Pruebo su ejecución con los archivos compilados que se encuentran en el directorio /bin - en mi caso.
 
-![Captura de pantalla](http://subirimagen.me/uploads/20181120111456.png)
+![Captura de pantalla](http://subirimagen.me/uploads/20181124125648.png)
+
+Y creando *.jar 
+
+![Captura creando jar](http://subirimagen.me/uploads/20181124130506.png)
+
+Ejecutándolo...
+
+![Captura ejecutando jar](http://subirimagen.me/uploads/20181124130329.png)
+
+
 
 ## Meta
 
