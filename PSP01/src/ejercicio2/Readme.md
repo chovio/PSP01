@@ -99,25 +99,37 @@ Por supuesto, cada proceso seguirá escribiendo su palabra en una línea indepen
 Es decir, si lanzamos 10 instancias de "lenguaje", al final, debemos tener en el fichero 10 + 20 + 30 + … + 100 = 550 líneas.
 
 ```java 
-if(args.length == 2 && args[0].matches("\\d\\d*")) {	
-  try {
-							
-	  for(int i=0;i<Integer.parseInt(args[0]); i++) { //repetir hasta llegar al número de repeticiones indicadas
-		  int lines = (1+i)*10;						
-		  Runtime.getRuntime().exec("java Lenguaje.java " + lines + " " + args[1] );
-						
+if (args.length == 2 && args[0].matches("\\d\\d*")) {
+	try {
+		int numlim = Integer.parseInt(args[0]);
+		String fileName = args[1];
+		int sum = 0;
+		for (int i = 0; i < numlim; i++) { // repetir hasta llegar al número de repeticiones indicadas
+
+			int lines = (1 + i) * 10;
+			// Cuando i toma valor 0, se crean 10 palabras en el fichero pasado por
+			// parámetro args[1]
+			// Cuando i toma valor 1, se añaden 20 palabras... etc.
+
+			Runtime.getRuntime().exec("java -jar lenguaje.jar " + lines + " " + fileName);
+
+			System.out.println("Se han generado " + lines + " palabras.");
+			sum = sum + lines; // Va sumando hasta alcanzar el total de palabras generadas
 		}
-						
-  }catch(Exception e) {
-				
-	e.printStackTrace();			
-			
+
+		System.out.println("Total palabras generadas: " + sum);
+
+	} catch (IOException e) {
+
+		e.printStackTrace();
+
+	}
+
 }
 ```
 
-![Captura Colaborar](http://subirimagen.me/uploads/20181124103319.png)
+![Captura Colaborar](http://subirimagen.me/uploads/20181124132247.png)
 
-![Captura archivos creados](http://subirimagen.me/uploads/20181124103412.png)
 
 ## Meta
 
