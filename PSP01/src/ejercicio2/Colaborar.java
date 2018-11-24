@@ -33,14 +33,14 @@ public class Colaborar {
 					// parámetro args[1]
 					// Cuando i toma valor 1, se añaden 20 palabras... etc.
 
-					Runtime.getRuntime().exec("java -jar Lenguaje.jar " + lines + " " + fileName);
+					Runtime.getRuntime().exec("java -jar lenguaje.jar " + lines + " " + fileName);
 
 					System.out.println("Se han generado " + lines + " palabras.");
 					sum = sum + lines; // Va sumando hasta alcanzar el total de palabras generadas
 				}
 
 				System.out.println("Total palabras generadas: " + sum);
-				
+
 
 			} catch (IOException e) {
 
