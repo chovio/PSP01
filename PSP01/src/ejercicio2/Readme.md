@@ -89,6 +89,7 @@ Archivo creado:
 
 ![Captura archivo generado](http://subirimagen.me/uploads/20181124131656.png)
 
+Es importante que al generar el archivo "jar" usemos "lenguaje.jar" debido a que de ello depende la correcta ejecución de la siguiente aplicación "colaborar.jar"
 
 
 ## Segunda Parte:
