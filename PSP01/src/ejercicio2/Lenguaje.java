@@ -19,7 +19,7 @@ public class Lenguaje {
 		
 		//Qué nos pide el ejercicio? 
 		
-		//Ejecutar 'java -jar lenguaje 40 miFicheroDeLenguaje.txt', por tanto hay que pasar dos parámetros
+		//Ejecutar 'java ejercicio2.Lenguaje 40 miFicheroDeLenguaje.txt', por tanto hay que pasar dos parámetros
 		
 		//String fileName = null;//"miFicheroDeLeguaje.txt"
 		BufferedWriter writer = null;
@@ -28,7 +28,7 @@ public class Lenguaje {
 			//el primer parámetro debe ser un número, que es el que nos indica el número de repeticiones que queremos.
 			//El segundo parámetro será el nombre del archivo "miFicheroDeLenguaje.txt"
 			//args[1] = fileName;
-			
+					
 		
 			try {
 			

@@ -23,7 +23,7 @@ public class Colaborar {
 					//Cuando i toma valor 1, se añaden 20 palabras... etc.
 					Runtime.getRuntime().exec("java ejercicio2.Lenguaje " + lines + " " + args[1] );
 					System.out.println("Se han generado " + lines + " palabras.");
-					sum = sum+ lines;
+					sum = sum+ lines; //Va sumando hasta alcanzar el total de palabras generadas
 					}
 				
 				System.out.println("Total palabras generadas: " + sum);
