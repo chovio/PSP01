@@ -34,37 +34,37 @@ try {
 			
   writer = new BufferedWriter(new FileWriter(file, true));//pongo true para que no elimine el archivo anterior, si no que añada lineas
   for(int i=0;i<Integer.parseInt(args[0]); i++) { //repetir hasta llegar al número de repeticiones indicadas
-		//ahora qué repetimos? El algoritmo de generación de aleatorios.
+	//ahora qué repetimos? El algoritmo de generación de aleatorios.
 		
-		Random randomLetter = new Random(); //este objeto Random, generará un caracter aleatorio de la 'a' a la 'z',
-		//Por lo que ahora necesitamos un aleatorio que indique cuántas letras necesita generar en cada línea:
-		Random numOfLetters = new Random();
+	Random randomLetter = new Random(); //este objeto Random, generará un caracter aleatorio de la 'a' a la 'z',
+	//Por lo que ahora necesitamos un aleatorio que indique cuántas letras necesita generar en cada línea:
+	Random numOfLetters = new Random();
 		
-		//Además, una cadena de caracteres que será la palabra generada por concatenación de los diferentes caracteres.
-		String oneLetter;
-		String stWord = "";
+	//Además, una cadena de caracteres que será la palabra generada por concatenación de los diferentes caracteres.
+	String oneLetter;
+	String stWord = "";
 		
-		/*
-		 *¿Cómo funciona?
-		 *
-		 * En un bucle, desde i = 7 (número mínimo de caracteres) hasta 15 (num máximo), se concatenan en una cadena
-		 * caracteres aleatorios generados 'randomLetter' de 0 + 'a' hasta 26+'a';
-		 * 
-		 */
-		int numOfLettersInt = numOfLetters.nextInt(8)+8;
+	/*
+	 *¿Cómo funciona?
+	 *
+	 * En un bucle, desde i = 7 (número mínimo de caracteres) hasta 15 (num máximo), se concatenan en una cadena
+	 * caracteres aleatorios generados 'randomLetter' de 0 + 'a' hasta 26+'a';
+	 * 
+	 */
+	int numOfLettersInt = numOfLetters.nextInt(8)+8;
+	
+	for(int j = 0; j < numOfLettersInt; j++ ) {
+				
+		oneLetter = Character.toString((char)(randomLetter.nextInt(26)+'a'));
+		stWord = stWord + oneLetter;
 		
-		for(int j = 0; j < numOfLettersInt; j++ ) {
-					
-			oneLetter = Character.toString((char)(randomLetter.nextInt(26)+'a'));
-			stWord = stWord + oneLetter;
+	}
+	
+	writer.write(stWord+"\n");//Cada palabra que la escriba y me añada un salto de línea
+	System.out.println(stWord+" - || longitud de palabra :" + stWord.length()+ " letras.");
 			
-		}
-		
-		writer.write(stWord+"\n");//Cada palabra que la escriba y me añada un salto de línea
-		System.out.println(stWord+" - || longitud de palabra :" + stWord.length()+ " letras.");
-				
-		//Muestra la palabra generada
-				
+	//Muestra la palabra generada
+			
 		
 				
 	}
