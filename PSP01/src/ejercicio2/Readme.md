@@ -1,4 +1,4 @@
-# Ejercicio 1
+# Ejercicio 2
 
 ## Primera parte: 
 Primera parte: implementa una aplicación que escriba en un fichero indicado por el usuario conjuntos de letras generadas de forma aleatoria (sin sentido real). Escribiendo cada conjunto de letras en una línea distinta. El número de conjuntos de letras a generar por el proceso, también será dado por el usuario en el momento de su ejecución. Esta aplicación se llamará "lenguaje" y como ejemplo, podrá ser invocada así:
@@ -17,7 +17,7 @@ Indicando que se generarán 40 palabras del lenguaje y serán guardadas en miFic
 		
 //Qué nos pide el ejercicio? 
 		
-//Ejecutar 'java -jar lenguaje 40 miFicheroDeLenguaje.txt', por tanto hay que pasar dos parámetros
+//Ejecutar 'lenguaje 40 miFicheroDeLenguaje.txt', por tanto hay que pasar dos parámetros
 		
 //String fileName = null;//"miFicheroDeLeguaje.txt"
 BufferedWriter writer = null;
@@ -65,7 +65,6 @@ try {
 			
 	//Muestra la palabra generada
 			
-		
 				
 	}
 			
@@ -78,6 +77,10 @@ try {
 	writer.close();
 }
 ```
+
+![Captura Lenguaje](http://subirimagen.me/uploads/20181124103101.png)
+
+
 
 ## Segunda Parte:
 Segunda parte: implementa una aplicación, llamada 'colaborar', que lance al menos 10 instancias de la aplicación "lenguaje". 
@@ -102,31 +105,11 @@ if(args.length == 2 && args[0].matches("\\d\\d*")) {
 			
 }
 ```
-## Historial de versiones
 
-* 0.2.1
-    * CAMBIO: Actualizada la documentación (el módulo de código permanece igual)
-* 0.2.0
-    * CAMBIO: Eliminado `setDefaultXYZ()`
-    * AÑADIDO: Añadido `init()`
-* 0.1.1
-    * ARREGLADO: Cuelgue cuando se llama a `baz()` (Gracias a  @NombreDelAmableContribuidor!)
-* 0.1.0
-    * La primera release
-    * CAMBIO: Renombrado `foo()` a `bar()`
-* 0.0.1
-    * Trabajo en progreso
+![Captura Colaborar](http://subirimagen.me/uploads/20181124103319.png)
+
+![Captura archivos creados](http://subirimagen.me/uploads/20181124103412.png)
 
 ## Meta
 
-Tu nomre – [@TuTwitter](https://twitter.com/dbader_org) – TuEmail@example.com
-
-Distribuido bajo la licencia XYZ. Ver ``LICENSE`` para más información.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+Javier Salgado Tenreiro
